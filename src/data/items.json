@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 20.50,
+    "imgUrl": ""
+  },
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 20.50,
+    "imgUrl": ""
+  },
+  {
+    "id": 1,
+    "name": "Iphone",
+    "price": 20.50,
+    "imgUrl": ""
+  },
+  {
+    "id": 1,
+    "name": "Apple",
+    "price": 20.50,
+    "imgUrl": ""
+  }
+]
