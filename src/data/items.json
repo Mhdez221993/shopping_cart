@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Book",
-    "price": 20.50,
-    "imgUrl": ""
+    "name": "Android",
+    "price": 400.50,
+    "imgUrl": "/imgs/android.png"
   },
   {
-    "id": 1,
-    "name": "Laptop",
-    "price": 20.50,
-    "imgUrl": ""
+    "id": 2,
+    "name": "Camera",
+    "price": 999.99,
+    "imgUrl": "/imgs/camera.jpg"
   },
   {
-    "id": 1,
-    "name": "Iphone",
-    "price": 20.50,
-    "imgUrl": ""
+    "id": 3,
+    "name": "Imac",
+    "price": 3000,
+    "imgUrl": "/imgs/imac.png"
   },
   {
-    "id": 1,
-    "name": "Apple",
-    "price": 20.50,
-    "imgUrl": ""
+    "id": 4,
+    "name": "Smartphone",
+    "price": 249.99,
+    "imgUrl": "/imgs/smartphone.png"
   }
 ]
