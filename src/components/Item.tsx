@@ -36,7 +36,9 @@ export const Item = ({ id, name, imgUrl, price }: ItemProps) => {
 
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100">+ Add To Cart</Button>
+            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+              + Add To Cart
+            </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
@@ -46,14 +48,16 @@ export const Item = ({ id, name, imgUrl, price }: ItemProps) => {
                 className="d-flex justify-content-center align-content-center"
                 style={{ gap: '.5rem' }}
               >
-                <Button>-</Button>
+                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <div>
                   <span className="fs-3">{quantity} in cart</span>
                 </div>
-                <Button>+</Button>
+                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
 
-              <Button variant="danger">Remove</Button>
+              <Button variant="danger" onClick={() => removeFromCart(id)}>
+                Remove
+              </Button>
             </div>
           )}
         </div>
