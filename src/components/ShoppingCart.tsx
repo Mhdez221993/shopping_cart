@@ -1,6 +1,8 @@
 import { Offcanvas, Stack } from 'react-bootstrap'
 
 import { CartItem } from './CartItem'
+import { format_currency } from '../utilities/format_currency'
+import storeItems from '../data/items.json'
 import { useShppingCart } from '../context/ShoppingCartContext'
 
 type ShoppingCartProps = {
@@ -20,6 +22,16 @@ export const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
+          <div className="ms-auto fw-bold fs-5">
+            Total{''}
+            {format_currency(
+              cartItems.reduce((total, cartItem) => {
+                const item = storeItems.find((i) => i.id === cartItem.id)
+
+                return total + (item?.price || 0) * cartItem.quantity
+              }, 0)
+            )}
+          </div>
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
