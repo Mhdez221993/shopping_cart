@@ -12,8 +12,8 @@ type CartItemProps = {
 export const CartItem = ({ id, quantity }: CartItemProps) => {
   const { removeFromCart } = useShppingCart()
 
-  const item = storeItems.find((item) => item.id === id)
-  if (item === null) return null
+  const item = storeItems.find((i) => i.id === id)
+  if (item == null) return null
 
   return (
     <Stack gap={2} direction="horizontal" className="d-flex align-items-center">
@@ -32,15 +32,15 @@ export const CartItem = ({ id, quantity }: CartItemProps) => {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: '.75rem' }}>
-          {format_currency(item?.price)}
+          {format_currency(item.price)}
         </div>
       </div>
       <div>
-        {format_currency(item?.price * quantity)}{' '}
+        {format_currency(item.price * quantity)}{' '}
         <Button
           variant="outline-danger"
           size="sm"
-          onClick={() => removeFromCart(item?.id)}
+          onClick={() => removeFromCart(item.id)}
         >
           &times;
         </Button>

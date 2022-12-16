@@ -2,13 +2,13 @@
   {
     "id": 1,
     "name": "Android",
-    "price": 400.50,
+    "price": 400,
     "imgUrl": "/imgs/android.png"
   },
   {
     "id": 2,
     "name": "Camera",
-    "price": 999.99,
+    "price": 999,
     "imgUrl": "/imgs/camera.jpg"
   },
   {
@@ -20,7 +20,7 @@
   {
     "id": 4,
     "name": "Smartphone",
-    "price": 249.99,
+    "price": 249,
     "imgUrl": "/imgs/smartphone.png"
   }
 ]
