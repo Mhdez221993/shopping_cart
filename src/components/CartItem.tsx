@@ -11,12 +11,20 @@ export const CartItem = ({ id, quantity }: CartItemProps) => {
   if (item === null) return null
 
   return (
-    <Stack gap={2} direction="horizontal">
+    <Stack gap={2} direction="horizontal" className="d-flex align-items-center">
       <img
         src={item?.imgUrl}
         alt={item?.name}
         style={{ width: '125px', height: '75px', objectFit: 'cover' }}
       />
+      <div className="me-auto">
+        {item?.name}{' '}
+        {quantity > 1 && (
+          <span className="text-muted" style={{ fontSize: '.65rem' }}>
+            x{quantity}
+          </span>
+        )}
+      </div>
     </Stack>
   )
 }
